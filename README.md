@@ -102,7 +102,7 @@ Code Explanation
 │   └── search.js
 ├── .env
 ├── README.md
-└── server.js
+└── index.js
 ```
 
 
