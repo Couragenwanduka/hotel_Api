@@ -1,8 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import  {roomtype,Rooms}from '../src/routes/post.js';
-import {getRooms,searchRooms,getRoomById} from '../src/routes/get.js';
-import {updateRoom} from '../src/routes/patch.js';
+import  {roomtype,Rooms}from './routes/post.js';
+import {getRooms,searchRooms,getRoomById} from './routes/get.js';
+import {updateRoom} from './routes/patch.js';
 import { deleteRoom } from './routes/delete.js';
 dotenv.config()
 const app = express();
