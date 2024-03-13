@@ -1,11 +1,7 @@
 import mongoose from "mongoose";
 
-const room=mongoose.Schema({
+const roomDb=mongoose.Schema({
 
-    id:{
-        type:String,
-        required:true
-    },
     name:{
         type:String,
         required:true
@@ -23,6 +19,6 @@ const room=mongoose.Schema({
         required:true
     }
 })
-const rooms = mongoose.model("Room", room);
+const room= mongoose.model("Room", roomDb);
 
-export default rooms;
+export default room;

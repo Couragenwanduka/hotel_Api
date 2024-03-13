@@ -1,8 +1,6 @@
-import rooms from '../models/Rooms.js';
-import connectDB from '../config/mongodb.js';
+import rooms from '../models/Room.js';
 
 
-connectDB();
 export async function deleteRoom(request,response){
      try{
          const {id}=request.params;

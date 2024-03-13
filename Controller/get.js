@@ -1,7 +1,7 @@
-import rooms from '../models/Rooms.js';
-import Roomtype from '../models/Roomtypes.js';
-import connectDB from '../config/mongodb.js';
-connectDB();
+import rooms from '../models/Room.js';
+import Roomtype from '../models/Roomtype.js';
+
+
 
 export  async function  getRooms(request, response) {
     try {
