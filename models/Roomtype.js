@@ -1,13 +1,12 @@
 import mongoose from 'mongoose';
 
 
-const roomtypes= mongoose.Schema({
-    
+const roomtype= mongoose.Schema({
     name:{
         type:String,
         required:true
     }
 });
-const roomtype= mongoose.model('RoomType',roomtypes);
+const Roomtypes= mongoose.model('RoomType',roomtype);
 
-export default roomtypes;
+export default Roomtypes;

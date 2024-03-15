@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
-
+import Roomtypes from "../models/Roomtype.js";
 const roomDb=mongoose.Schema({
-
     name:{
         type:String,
         required:true
