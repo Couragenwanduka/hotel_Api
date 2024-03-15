@@ -1,6 +1,9 @@
 import express from 'express';
-import{Rooms,getRooms, searchRooms,roomtype} from '../Controller/Room.controller.js';
-import{ getRoomById,updateRoom,deleteRoom}from '../Controller/Room.controller2.js'
+import  {roomtype,Rooms}from './Controller/post.js';
+import {getRooms,searchRooms,getRoomById} from './Controller/get.js';
+import {updateRoom} from './Controller/patch.js';
+import { deleteRoom } from './Controller/delete.js';
+
 const router= express.Router();
 
 
