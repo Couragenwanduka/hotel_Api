@@ -5,7 +5,7 @@ roomtype function is used to register a roomtype
 * it also saves the room with an id that fits to the specified room type
 */ 
 
-export async function roomtype(request, response) {
+export const roomtype=async(request, response)=>{
   try {
     const { name } = request.body;
     if (!name) {
@@ -25,7 +25,7 @@ export async function roomtype(request, response) {
  * checks for empty fields 
  * checks if the room and id already exists
  */
-export async function Rooms(request, response) {
+export const Rooms= async(request, response)=>{
   try {
     const {name, roomtype,description,price} = request.body;
     if ( !name || !roomtype||!description||!price){
@@ -48,7 +48,7 @@ export async function Rooms(request, response) {
     console.log(error)
   }
 }
-export  async function  getRooms(request, response) {
+export const getRooms= async(request, response)=>{
     try {
         const allRooms= await getAllRooms()
         return response.status(200).json(allRooms);
@@ -59,7 +59,7 @@ export  async function  getRooms(request, response) {
         })
     }
 }
-export async function searchRooms(request, response){
+export const searchRooms=async(request, response)=>{
     try{
  const filteredRooms = await filteredRoom(request)
  return response.status(200).json(filteredRooms);
