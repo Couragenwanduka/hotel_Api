@@ -2,7 +2,7 @@ import {findRoomById,updateRoomById ,deleteRoomById} from '../service/room.servi
 
 
 
-export async function getRoomById(request, response) {
+export const getRoomById= async(request, response)=> {
     try {
         const roomId= request.params.id;
         if(!roomId){
@@ -24,7 +24,7 @@ export async function getRoomById(request, response) {
         })
     }
 }
-export async function updateRoom(request,response){
+export const updateRoom=async(request,response)=>{
     const {id}=request.params;
     const {name,roomtype,price}=request.body;
     if(!id||!name||!roomtype||!price){
@@ -41,7 +41,7 @@ export async function updateRoom(request,response){
     return response.status(200).json(Rooms);
 
 }
-export async function deleteRoom(request,response){
+export const deleteRoom= async(request,response)=>{
     try{
         const {id}=request.params;
         if(!id){
