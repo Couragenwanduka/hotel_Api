@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/mongodb.js';
-import router from './routes/routes.js';
+import router from './Routes/routes.js';
 
 // Load environment variables from .env file
 dotenv.config();
