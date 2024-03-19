@@ -1,21 +1,28 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import connectDb from '../src/config/mongodb.js';
-import router from '../src/routes/routes.js';
+import connectDB from './config/mongodb.js';
+import router from './routes/routes.js';
 
+// Load environment variables from .env file
 dotenv.config();
 
+// Connect to MongoDB
+connectDB();
+
+// Create Express application
 const app = express();
 
-connectDb();
+// Set port from environment variable, defaulting to 5000 if not provided
+const PORT = process.env.PORT || 5000;
 
-const Port= process.env.PORT ||5000
+// Middleware setup
+app.use(express.json()); // Parse JSON bodies
+app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+// Mount router at root path
+app.use("/", router);
 
-
-app.use('/',router)
-app.listen(Port,()=>{
-    console.log(`Server is running on port ${Port}`)
+// Start server and listen on specified port
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
