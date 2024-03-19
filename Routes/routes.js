@@ -6,7 +6,7 @@ const router= express.Router();
 
 
 router.get ('/',(req, res) => {
-    res.send('Hello World!');
+    res.send("Salut, bienvenue a l'hotel de la mauvaise chienne ");
 })
 router.get('/api/v1/rooms-types',getRooms)
 router.get('/api/v1/rooms', searchRooms);
