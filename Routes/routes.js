@@ -5,7 +5,9 @@ import{ getRoomById,updateRoom,deleteRoom}from '../Controller/Room.controller2.j
 const router= express.Router();
 
 
-
+router.get ('/',(req, res) => {
+    res.send('Hello World!');
+})
 router.get('/api/v1/rooms-types',getRooms)
 router.get('/api/v1/rooms', searchRooms);
 router.post("/api/v1/rooms-types",roomtype)
